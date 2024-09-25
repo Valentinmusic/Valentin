@@ -40,7 +40,7 @@ header {
 
 nav ul {
     display: flex;
-    justify-content: center; /* Center the navigation items */
+    justify-content: center;
     align-items: center;
     list-style: none;
     padding: 0;
@@ -53,7 +53,7 @@ nav ul li a {
     font-weight: bold;
     padding: 10px 15px;
     transition: color 0.3s;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
 }
 
 h1 {
@@ -81,12 +81,13 @@ h1 {
     text-align: center;
 }
 .latest-music img {
+    max-width: 100%;
     height: auto;
     align-items: center;
 }
 
 .featured img {
-    width: 100%;
+    max-width: 100%;
     height: auto;
     border-radius: 8px;
     margin-bottom: 15px;
@@ -141,42 +142,42 @@ footer {
 }
 
 #contact_form {
-    background-color: #222222; /* Matches your existing background color */
-    padding: 20px; /* Uniform padding */
-    border-radius: 10px; /* Rounded corners */
-    max-width: 600px; /* Adjusted width for better visibility */
-    margin: auto; /* Center the form */
+    background-color: #222222;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: auto;
 }
 
 .row label {
-    color: #E5C55D; /* Match with your font color */
+    color: #E5C55D;
     font-size: 18px;
     margin-left: 10px;
 }
 
 input[type=text], textarea {
     text-align: center;
-    background-color: #333333; /* Darker background for better contrast */
-    border-radius: 10px;
-    color: #E5C55D; /* Match with your font color */
-    margin: 10px 0; /* Top and bottom margins */
-    padding: 10px; /* Added padding for better text input */
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5); /* Softer shadow */
-    width: calc(100% - 20px); /* Make it wider while considering padding */
+    background-color: #333333;
+    border-radius: 6px;
+    color: #E5C55D;
+    margin: 10px 0;
+    padding: 10px;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    width: calc(100% - 20px);
 }
 
 textarea {
-    resize: vertical; /* Allow vertical resizing */
-    height: 100px; /* Set a default height */
+    resize: vertical;
+    height: 100px;
 }
 
 input[type=submit] {
-    background-color: #6413AE; /* Match with your color scheme */
+    background-color: #6413AE;
     color: #FFFFFF;
     border-radius: 10px;
     font-size: 18px;
     margin-left: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5); /* Softer shadow */
-    padding: 10px 20px; /* Added padding for better clickability */
-    cursor: pointer; /* Change cursor on hover */
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+    padding: 10px 20px;
+    cursor: pointer;
 }
