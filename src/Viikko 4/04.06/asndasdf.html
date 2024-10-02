@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WebGL Earth Example</title>
+  <style>
+    #map {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Button section -->
+<div id="buttons">
+  <button id="goHome">GO HOME</button>
+  <button id="showCoords">SHOW COORDS</button>
+</div>
+
+<!-- WebGL Earth Map -->
+<div id="map"></div>
+
+<script src="https://www.webglearth.com/v2/api.js"></script>
+<script>
+  var map = WE.map('map', {
+    center: [51.505, -0.09],
+    zoom: 3
+  });
+
+  WE.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+  }).addTo(map);
+
+  var homeCoords = [60.1699, 24.9384];
+
+  function showCoords() {
+    var center = map.getCenter();
+    alert("Current Coordinates: Latitude: " + center[0] + ", Longitude: " + center[1]);
+  }
+
+  function goHome() {
+    map.setView(homeCoords, 10);
+  }
+
+  document.getElementById('goHome').addEventListener('click', goHome);
+  document.getElementById('showCoords').addEventListener('click', showCoords);
+</script>
+
+</body>
+</html>
