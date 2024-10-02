@@ -1,5 +1,5 @@
 html, body {
-    font-family: 'Engravers MT', sans-serif;
+    font-family: 'Arial', sans-serif;
     background-color: #111111;
     color: #E5C55D;
     width: 100%;
@@ -8,7 +8,7 @@ html, body {
     display: flex;
     flex-direction: column;
 }
-
+/* Header bar settings*/
 header {
     padding: 20px;
     background-color: #1E1E1E;
@@ -16,19 +16,49 @@ header {
     font-size: 18px;
     position: fixed;
     top: 0;
+    left: 0;
+    right: 0;
     width: 100%;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
     z-index: 10;
+    font-family: 'engravers MT', sans-serif;
+    font-size: 24px;
 }
 .Container {
     position: relative;
     text-align: center;
     display: flex;
 }
+/*Latest music picture settings*/
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+}
+
+.grid-container li {
+    text-align: center;
+}
+
+.grid-container img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px auto;
+}
+
+.grid-container a {
+    display: block;
+    text-decoration: none;
+    color: #111111;
+    font-weight: bold;
+}
+/*Latest music picture settings ends*/
 
 .Phototext {
     position: absolute;
@@ -58,18 +88,35 @@ nav ul li a {
 
 h1 {
     font-family: 'Brush Script MT', cursive;
-    font-size: 64px;
+    font-size: 72px;
     color: #6413AE;
+    text-shadow: #111111 4px 4px 4px;
 }
-
+h2 {
+    font-family: 'engravers MT', sans-serif;
+    font-size: 24px;
+    color: #E5C55D;
+    text-shadow: #111111 4px 4px 4px;
+}
+h3 {
+    font-family: 'engravers MT', sans-serif;
+    font-size: 24px;
+    color: #E5C55D;
+}
 .content {
     display: flex;
     flex-wrap: wrap;
     padding: 40px 20px;
     gap: 40px;
     justify-content: center;
-    align-items: flex-start;
     background-color: #1E1E1E;
+}
+
+.some {
+    font-size: 72px;
+}
+.some:hover {
+    color: #E5C55D;
 }
 
 .featured, .latest-music {
@@ -130,6 +177,7 @@ footer {
     margin-top: auto;
 }
 
+
 footer p {
     margin: 0;
 }
@@ -141,13 +189,7 @@ footer {
     font-size: 14px;
 }
 
-#contact_form {
-    background-color: #222222;
-    padding: 20px;
-    border-radius: 10px;
-    max-width: 600px;
-    margin: auto;
-}
+
 
 .row label {
     color: #E5C55D;
