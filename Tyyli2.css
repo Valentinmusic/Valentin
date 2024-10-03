@@ -26,6 +26,9 @@ header {
     z-index: 10;
     font-family: 'engravers MT', sans-serif;
 }
+main {
+    margin: 50px auto;
+}
 
 .Container {
     position: relative;
@@ -105,121 +108,189 @@ h3 {
 }
 .content {
     display: flex;
-    flex-wrap: wrap;
-    padding: 40px 20px;
-    gap: 40px;
+    flex-direction: row;
     justify-content: center;
-    background-color: #1E1E1E;
-}
-
-.some {
-    font-size: 72px;
-}
-.some:hover {
-    color: #E5C55D;
-}
-
-.featured, .latest-music {
-    background-color: #222222;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    max-width: 400px;
-    text-align: center;
-}
-.latest-music img {
-    max-width: 100%;
-    height: auto;
     align-items: center;
-}
-
-.featured img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-.featured p, .latest-music ul {
-    font-size: 16px;
-    color: #CCCCCC;
-}
-
-.latest-music ul {
-    padding: 0;
-    list-style-type: none;
-    text-align: left;
-}
-
-.latest-music ul li {
-    margin: 10px 0;
-}
-
-.latest-music ul li a {
-    color: #E5C55D;
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.latest-music ul li a:hover {
-    color: #E5C55D;
-}
-
-footer {
-    text-align: center;
+    gap: 40px;
+    padding: 40px 20px;
     background-color: #1E1E1E;
-    color: #E5C55D;
-    padding: 15px;
-    font-size: 14px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
-    margin-top: auto;
 }
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column; /* Aseta ikonit päällekkäin mobiililaitteilla */
+        align-items: center;
+        gap: 20px; /* Pienempi väli elementtien välillä mobiilissa */
+    }
 
+    header, .faq {
+        padding: 20px 10px; /* Vähennä tyhjää tilaa yläreunassa mobiilissa */
+        font-size: 16px; /* Pienennä fonttikokoja mobiilissa */
+    }
 
-footer p {
-    margin: 0;
+    .some {
+        font-size: 48px; /* Pienennä ikonien kokoa mobiililaitteilla */
+    }
+
+    body {
+        padding: 10px; /* Lisää hieman sisäistä marginaalia mobiililaitteilla */
+    }
 }
+    .some {
+        font-size: 72px;
+        transition: color 0.3s ease;
+        color: #E5C55D;
+    }
 
-footer {
-    text-align: center;
-    background-color: #222222;
-    color: #E5C55D;
-    font-size: 14px;
+    .some:hover {
+        color: white;
+    }
+@media (max-width: 768px) {
+
+    .content {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .featured, .next-show-location {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* Google Maps iframe mukautuu pienempiin näyttöihin */
+    .next-show-location iframe {
+        width: 100%;
+        height: 250px;
+    }
+
+    /* Parantaa tekstin luettavuutta pienemmillä näytöillä */
+    h1, h2 {
+        font-size: 28px;
+    }
+
+    h3 {
+        font-size: 22px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    /* Asettelumuutokset */
+    footer {
+        padding: 20px;
+        font-size: 12px;
+    }
 }
+    .faq {
+        padding: 40px 20px;
+        background-color: #1E1E1E;
+        text-align: center;
+        color: #E5C55D;
+        display: block;
+    }
+
+    .featured, .latest-music {
+        background-color: #222222;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        max-width: 400px;
+        text-align: center;
+    }
+
+    .latest-music img {
+        max-width: 100%;
+        height: auto;
+        align-items: center;
+    }
+
+    .featured img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        margin-bottom: 15px;
+    }
+
+    .featured p, .latest-music ul {
+        font-size: 16px;
+        color: #CCCCCC;
+    }
+
+    .latest-music ul {
+        padding: 0;
+        list-style-type: none;
+        text-align: left;
+    }
+
+    .latest-music ul li {
+        margin: 10px 0;
+    }
+
+    .latest-music ul li a {
+        color: #E5C55D;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+    .latest-music ul li a:hover {
+        color: #E5C55D;
+    }
+
+    footer {
+        text-align: center;
+        background-color: #1E1E1E;
+        color: #E5C55D;
+        padding: 15px;
+        font-size: 14px;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+        margin-top: auto;
+    }
 
 
+    footer p {
+        margin: 0;
+    }
 
-.row label {
-    color: #E5C55D;
-    font-size: 18px;
-    margin-left: 10px;
-}
+    footer {
+        text-align: center;
+        background-color: #222222;
+        color: #E5C55D;
+        font-size: 14px;
+    }
 
-input[type=text], textarea {
-    text-align: center;
-    background-color: #333333;
-    border-radius: 6px;
-    color: #E5C55D;
-    margin: 10px 0;
-    padding: 10px;
-    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
-    width: calc(100% - 20px);
-}
 
-textarea {
-    resize: vertical;
-    height: 100px;
-}
+    .row label {
+        color: #E5C55D;
+        font-size: 18px;
+        margin-left: 10px;
+    }
 
-input[type=submit] {
-    background-color: #6413AE;
-    color: #FFFFFF;
-    border-radius: 10px;
-    font-size: 18px;
-    margin-left: 10px;
-    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
-    padding: 10px 20px;
-    cursor: pointer;
-}
+    input[type=text], textarea {
+        text-align: center;
+        background-color: #333333;
+        border-radius: 6px;
+        color: #E5C55D;
+        margin: 10px 0;
+        padding: 10px;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+        width: calc(100% - 20px);
+    }
+
+    textarea {
+        resize: vertical;
+        height: 100px;
+    }
+
+    input[type=submit] {
+        background-color: #6413AE;
+        color: #FFFFFF;
+        border-radius: 10px;
+        font-size: 18px;
+        margin-left: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        cursor: pointer;
+    }
+
