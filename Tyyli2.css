@@ -1,4 +1,4 @@
-html, body {
+html, body { /* Sites Body settings, colors etc.*/
     font-family: 'Arial', sans-serif;
     background-color: #111111;
     color: #E5C55D;
@@ -29,7 +29,7 @@ header {
 main {
     margin: 50px auto;
 }
-
+/*container settings for the pictures box*/
 .Container {
     position: relative;
     text-align: center;
@@ -62,7 +62,7 @@ main {
     font-weight: bold;
 }
 /*Latest music picture settings ends*/
-
+/*Text inside image settings*/
 .Phototext {
     position: absolute;
     top: 50%;
@@ -70,7 +70,7 @@ main {
     transform: translate(-50%, -50%);
     z-index: 9;
 }
-
+/*Nav bar settings*/
 nav ul {
     display: flex;
     justify-content: center;
@@ -88,7 +88,7 @@ nav ul li a {
     transition: color 0.3s;
     white-space: nowrap;
 }
-
+/*Nav bar settings end*/
 h1 {
     font-family: 'Brush Script MT', cursive;
     font-size: 72px;
@@ -115,6 +115,7 @@ h3 {
     padding: 40px 20px;
     background-color: #1E1E1E;
 }
+/*Mobile settings*/
 @media (max-width: 768px) {
     .content {
         flex-direction: column; /* Aseta ikonit päällekkäin mobiililaitteilla */
@@ -180,6 +181,7 @@ h3 {
         padding: 20px;
         font-size: 12px;
     }
+    /*Mobile settings end*/
 }
     .faq {
         padding: 40px 20px;
@@ -235,7 +237,7 @@ h3 {
     .latest-music ul li a:hover {
         color: #E5C55D;
     }
-
+/*Footter settings*/
     footer {
         text-align: center;
         background-color: #1E1E1E;
@@ -293,4 +295,4 @@ h3 {
         padding: 10px 20px;
         cursor: pointer;
     }
-
+/*Footter settings end*/
