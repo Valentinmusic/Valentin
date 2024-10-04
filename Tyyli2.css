@@ -26,6 +26,23 @@ header {
     z-index: 10;
     font-family: 'engravers MT', sans-serif;
 }
+header a:hover{
+        color: #ffffff;
+        font-size: 20px;
+        text-decoration: none;
+        padding: 10px 20px;
+        margin: 0 5px;
+        display: inline-block;
+        transition: transform 0.3s;
+        z-index: 11;
+}
+.active {
+
+    background-color: #E5C55D;
+    color: white;
+    z-index: 12;
+
+}
 main {
     margin: 50px auto;
 }
@@ -130,6 +147,7 @@ h3 {
 
     .some {
         font-size: 48px; /* Pienennä ikonien kokoa mobiililaitteilla */
+        z-index: 15;
     }
 
     body {
